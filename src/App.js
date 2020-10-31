@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import About from './Components/About'
+import Home from './Components/Home'
+import Projects from './Components/Projects'
+import Contact from './Components/Contact'
+import BuildIcon from '@material-ui/icons/Build';
+import PersonIcon from '@material-ui/icons/Person'
+import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar'
+import HomeIcon from '@material-ui/icons/Home'
+import {Tabs, Tab} from '@material-ui/core';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {`q2`
+
+function App() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
    return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <div>
+        <nav>
+          <h1>Lauren Baldino</h1>
+          <h2>Software Engineering Student</h2>
+          <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="fullWidth"
+          indicatorColor="primary"
+          textColor="primary"
+          aria-label="icon label tabs example"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Tab icon={<HomeIcon  />} label="HOME" to="/" component={Link}/>
+          <Tab icon={<PersonIcon />} label="ABOUT ME" to="/about" component={Link}/>
+          <Tab icon={<BuildIcon />} label="PROJECTS" to="/projects" component={Link}/>
+          <Tab icon={<PermContactCalendarIcon  />} label="CONTACT ME" to="/contact" component={Link}/>
+          
+        </Tabs>
+        </nav>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
