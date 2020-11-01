@@ -1,7 +1,7 @@
 function About(){
     return(
         <div>
-            About Me!
+             <h1 style={{textAlign: "center"}}>About Me </h1>
         </div>
     )
 }

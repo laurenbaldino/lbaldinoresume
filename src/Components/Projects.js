@@ -1,7 +1,7 @@
 function Projects(){
     return(
         <div>
-            My Projects!
+             <h1 style={{textAlign: "center"}}>My Recent Work </h1>
         </div>
     )
 }

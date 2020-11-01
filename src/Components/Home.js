@@ -1,7 +1,7 @@
 function Home(){
     return(
         <div>
-            Welcome!
+             <h1 style={{textAlign: "center"}}>Welcome! </h1>
         </div>
     )
 }

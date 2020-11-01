@@ -27,14 +27,14 @@ function App() {
     <Router>
       <div>
         <nav>
-          <h1>Lauren Baldino</h1>
-          <h2>Software Engineering Student</h2>
+          <h1 style={{textAlign: "center"}}>Lauren Baldino</h1>
+          <h2 style={{textAlign: "center"}}>Software Engineering Student</h2>
           <Tabs
           value={value}
           onChange={handleChange}
           variant="fullWidth"
           indicatorColor="primary"
-          textColor="primary"
+          textColor="black"
           aria-label="icon label tabs example"
         >
           <Tab icon={<HomeIcon  />} label="HOME" to="/" component={Link}/>
