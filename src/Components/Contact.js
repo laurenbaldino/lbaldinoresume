@@ -25,13 +25,25 @@ export default function Contact() {
         <h1 style={{textAlign: "center"}}>Contact Information </h1>
       <Grid container spacing={3} alignItems="stretch" direction="row" justify="space-evenly">
         <Grid item style={{textAlign: "center"}}>
-            <LinkedInIcon />
+            <a href= 'http://linkedin.com/in/laurenbaldino'> <LinkedInIcon /> </a>
+            <br/>
+            LinkedIn
+            <br/>
+            LinkedIn.com/in/laurenbaldino
         </Grid>
         <Grid item style={{textAlign: "center"}}>
             <MailOutlineIcon />
+            <br/>
+            Email
+            <br/>
+            leb4351@rit.edu
         </Grid>
         <Grid item style={{textAlign: "center"}}>
-            <GitHubIcon />
+            <a href= 'http://github.com/laurenbaldino'> <GitHubIcon /></a>
+            <br/>
+            GitHub
+            <br/>
+            GitHub.com/laurenbaldino
         </Grid>
       </Grid>
     </div>
